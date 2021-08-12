@@ -1,6 +1,6 @@
 <div class="row">
 
-    <div class="col">
+    <!-- <div class="col">
 
         <h1>*ngIf</h1>
         <hr>
@@ -21,6 +21,17 @@
         <ul class="list-group">
             <li *ngFor="let personaje of personajes; let i = index" class="list-group-item"> {{ i+1}} - {{ personaje }}</li>
         </ul>
+    </div> -->
+
+    <div class="row">
+        <h1>Calculadora de Temperatura</h1>
+
+
+        <input type="text " #tempe placeholder="Temperatura en C" class="form-control my-2" (keyup)="calTemperatura(tempe.value, gradosCentigrados)" [(ngModel)]="temperaturaF">
+        <input type="text " #tempeF placeholder="Temperatura en F " class="form-control my-2" (keyup)="calTemperatura(tempeF.value, !gradosCentigrados)" [(ngModel)]="temperaturaC">
+
+
     </div>
+
 
 </div>
